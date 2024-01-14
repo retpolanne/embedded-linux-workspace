@@ -1,0 +1,14 @@
+base-devel
+git
+autoconf
+bison
+flex
+texinfo
+help2man
+gawk
+libtool
+ncurses
+unzip
+emacs
+kitty
+zsh
