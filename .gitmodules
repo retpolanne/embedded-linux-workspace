@@ -1,3 +1,12 @@
 [submodule "crosstool-ng"]
 	path = crosstool-ng
 	url = https://github.com/crosstool-ng/crosstool-ng
+[submodule "u-boot"]
+	path = u-boot
+	url = https://gitlab.denx.de/u-boot/u-boot
+[submodule "trusted-firmware-a"]
+	path = trusted-firmware-a
+	url = https://git.trustedfirmware.org/TF-A/trusted-firmware-a.git
+[submodule "linux"]
+	path = linux
+	url = git@github.com:retpolanne/linux.git

@@ -12,3 +12,5 @@ unzip
 emacs
 kitty
 zsh
+qemu-base
+yay-git
