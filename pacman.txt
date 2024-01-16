@@ -13,4 +13,5 @@ emacs
 kitty
 zsh
 qemu-base
-yay-git
+rsync
+linux-headers
