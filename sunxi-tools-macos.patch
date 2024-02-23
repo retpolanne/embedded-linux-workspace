@@ -1,0 +1,41 @@
+From cf9cd2d38a18c18f4557b7b1eee45b020aecd5a0 Mon Sep 17 00:00:00 2001
+From: Anne Isabelle Macedo <retpolanne@posteo.net>
+Date: Fri, 23 Feb 2024 11:52:40 -0300
+Subject: [PATCH] Make it work on macOS
+
+---
+ Makefile | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index 3d89718..bc62ad8 100644
+--- a/Makefile
++++ b/Makefile
+@@ -35,6 +35,7 @@ DEFAULT_CFLAGS += -D_NETBSD_SOURCE
+ endif
+ 
+ DEFAULT_CFLAGS += -Iinclude/
++DEFAULT_CFLAGS += -I/opt/homebrew/Cellar/dtc/1.7.0/include/
+ 
+ PKG_CONFIG ?= pkg-config
+ 
+@@ -126,6 +127,7 @@ LIBUSB_LIBS ?= `$(PKG_CONFIG) --libs $(LIBUSB)`
+ ZLIB = zlib
+ ZLIB_CFLAGS ?= `$(PKG_CONFIG) --cflags $(ZLIB)`
+ ZLIB_LIBS ?= `$(PKG_CONFIG) --libs $(ZLIB)`
++FDT_LIBS ?= -L/opt/homebrew/Cellar/dtc/1.7.0/lib/
+ 
+ ifeq ($(OS),Windows_NT)
+ 	# Windows lacks mman.h / mmap()
+@@ -143,7 +145,7 @@ SPI_FLASH:= fel-spiflash.c fel-spiflash.h fel-remotefunc-spi-data-transfer.h
+ 
+ sunxi-fel: fel.c fit_image.c thunks/fel-to-spl-thunk.h $(PROGRESS) $(SOC_INFO) $(FEL_LIB) $(SPI_FLASH)
+ 	$(CC) $(HOST_CFLAGS) $(LIBUSB_CFLAGS) $(ZLIB_CFLAGS) $(LDFLAGS) -o $@ \
+-		$(filter %.c,$^) $(LIBS) $(LIBUSB_LIBS) $(ZLIB_LIBS) -lfdt
++		$(filter %.c,$^) $(LIBS) $(LIBUSB_LIBS) $(ZLIB_LIBS) $(FDT_LIBS) -lfdt
+ 
+ sunxi-nand-part: nand-part-main.c nand-part.c nand-part-a10.h nand-part-a20.h
+ 	$(CC) $(HOST_CFLAGS) -c -o nand-part-main.o nand-part-main.c
+-- 
+2.39.3 (Apple Git-145)
+
