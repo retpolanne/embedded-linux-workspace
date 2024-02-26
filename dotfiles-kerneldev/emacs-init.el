@@ -62,4 +62,8 @@
 
 (use-package multi-vterm
 	:config
+	(evil-define-key 'insert vterm-mode-map (kbd "C-a")      #'vterm--self-insert)
+	(evil-define-key 'insert vterm-mode-map (kbd "C-b")      #'vterm--self-insert)
+	(evil-define-key 'insert vterm-mode-map (kbd "C-w")      #'vterm--self-insert)
+	(evil-define-key 'insert vterm-mode-map (kbd "C-k")      #'vterm--self-insert)
 	(evil-define-key 'insert vterm-mode-map (kbd "C-r")      #'vterm--self-insert))
