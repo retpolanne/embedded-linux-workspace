@@ -1,4 +1,4 @@
-base-devel
+build-essential
 git
 autoconf
 bison
@@ -6,12 +6,14 @@ flex
 texinfo
 help2man
 gawk
-libtool
-ncurses
+libtool-bin
+libncurses5-dev
 unzip
 emacs
 kitty
 zsh
-qemu-base
 rsync
-linux-headers
+python3-pip
+pipx
+fzf
+cmake

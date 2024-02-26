@@ -29,6 +29,18 @@ Send email
 C-x m
 ```
 
+Switching buffers quickly
+
+```
+C-x LEFT/RIGHT
+```
+
+Quitting command
+
+```
+C-g
+```
+
 ## emacs gnus
 
 Follow [this guide](https://www.emacswiki.org/emacs/GnusAuthinfo) to encrypt your authinfo, then run setup.sh
