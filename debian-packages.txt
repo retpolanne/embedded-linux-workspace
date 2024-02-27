@@ -21,3 +21,4 @@ linux-headers-6.1.0-18-cloud-arm64
 bc
 swig
 libssl-dev
+u-boot-tools
