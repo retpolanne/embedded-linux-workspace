@@ -1,1 +1,2 @@
 brew "dtc"
+brew "picocom"
