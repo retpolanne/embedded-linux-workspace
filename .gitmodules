@@ -23,7 +23,6 @@
 [submodule "opensbi"]
 	path = opensbi
 	url = https://github.com/riscv-software-src/opensbi
-[submodule "sun20i_d1_spl"]
-	path = sun20i_d1_spl
-	url = https://github.com/smaeul/sun20i_d1_spl
-	branch = mainline
+[submodule "xfel"]
+	path = xfel
+	url = https://github.com/xboot/xfel.git

@@ -1,0 +1,3 @@
+./xfel ddr d1
+./xfel write 0x40000000 out/u-boot-sunxi-with-spl.bin
+./xfel exec 0x40000000

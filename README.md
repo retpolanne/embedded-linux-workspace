@@ -60,8 +60,12 @@ picocom -b 115200 /dev/tty.usbserial-A50285BI
 On the mac host:
 
 ```sh
-limactl cp debian-12:/home/annemacedo.linux/embedded-linux-workspace/u-boot/u-boot-sunxi-with-spl.bin /tmp
-./sunxi-fel -p -v $(cat ../sunxi-fel-cmds)
+cd xfel
+make
+
+limactl cp debian-12:/home/annemacedo.linux/embedded-linux-workspace/out.tgz .
+
+source ../xfel-commands
 ```
 
 SD Card:
