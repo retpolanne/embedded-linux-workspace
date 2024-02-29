@@ -3,7 +3,8 @@
 	url = https://github.com/crosstool-ng/crosstool-ng
 [submodule "u-boot"]
 	path = u-boot
-	url = https://gitlab.denx.de/u-boot/u-boot
+	url = https://github.com/smaeul/u-boot
+	branch = d1-wip
 [submodule "trusted-firmware-a"]
 	path = trusted-firmware-a
 	url = https://git.trustedfirmware.org/TF-A/trusted-firmware-a.git
@@ -16,3 +17,13 @@
 [submodule "crust"]
 	path = crust
 	url = https://github.com/crust-firmware/crust
+[submodule "riscv-gnu-toolchain"]
+	path = riscv-gnu-toolchain
+	url = https://github.com/riscv/riscv-gnu-toolchain
+[submodule "opensbi"]
+	path = opensbi
+	url = https://github.com/riscv-software-src/opensbi
+[submodule "sun20i_d1_spl"]
+	path = sun20i_d1_spl
+	url = https://github.com/smaeul/sun20i_d1_spl
+	branch = mainline

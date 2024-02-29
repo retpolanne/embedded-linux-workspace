@@ -1,5 +1,11 @@
 # Kernel compilation env
 
+When using this repo, run - if on the riscv branch, it should download a lot of stuff!:
+
+``` sh
+git submodule update --init --recursive
+```
+
 ## Setup env
 
 ```sh
@@ -55,7 +61,7 @@ On the mac host:
 
 ```sh
 limactl cp debian-12:/home/annemacedo.linux/embedded-linux-workspace/u-boot/u-boot-sunxi-with-spl.bin /tmp
-./sunxi-fel -v $(cat ../sunxi-fel-cmds)
+./sunxi-fel -p -v $(cat ../sunxi-fel-cmds)
 ```
 
 SD Card:
@@ -63,3 +69,37 @@ SD Card:
 ```
 sudo dd if=/tmp/u-boot-sunxi-with-spl.bin of=/dev/disk4 iflag=fullblock oflag=direct conv=fsync status=progress
 ```
+
+
+# Linux/U-boot Sunxi and MangoPi MQ Pro
+
+More info [here](https://linux-sunxi.org/MangoPi_MQ-Pro) and [here](https://linux-sunxi.org/Allwinner_Nezha#Manual_build)
+
+Since we're using RISCV, we need a RISCV cross compiler.
+
+``` sh
+cd riscv-gnu-toolchain
+./configure --prefix=$HOME/x-tools/riscv
+make -j`nproc` linux
+```
+
+``` sh
+cd opensbi
+make PLATFORM=generic FW_FDT_PATH=../u-boot/arch/riscv/dts/sun20i-d1-mangopi-mq-pro.dtb FW_PIC=y -j`nproc`
+```
+
+``` sh
+cd u-boot
+make mangopi_mq_pro_defconfig
+make -j`nproc` OPENSBI=../opensbi/build/platform/generic/firmware/fw_dynamic.bin
+```
+
+``` sh
+cd linux
+git remote add d1 https://github.com/smaeul/linux.git
+git fetch d1
+git switch -c riscv-d1-all d1/d1/all
+make 64-bit.config
+make -j`nproc`
+```
+

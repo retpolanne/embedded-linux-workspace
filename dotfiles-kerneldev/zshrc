@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
-export CROSS_COMPILE="aarch64-linux-gnu-"
-export ARCH=arm64
+export PATH=$HOME/x-tools/riscv/bin:$HOME/.local/bin:$HOME/bin:/usr/local/bin:$PATH
+export CROSS_COMPILE="riscv64-unknown-linux-gnu-"
+export ARCH=riscv
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
