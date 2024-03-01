@@ -32,3 +32,6 @@
 [submodule "libjaylink"]
 	path = libjaylink
 	url = https://github.com/syntacore/libjaylink.git
+[submodule "rpi-linux"]
+	path = rpi-linux
+	url = https://github.com/raspberrypi/linux

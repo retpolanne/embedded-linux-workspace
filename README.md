@@ -110,7 +110,7 @@ make -j`nproc`
 
 # Jlink and OpenOCD
 
-Follow this [guide](https://linaro.atlassian.net/wiki/spaces/TCWGPUB/pages/25296346120/Raspberry+Pi+Linux+kernel+debugging+with+OpenOCD) on the pinout for the device.
+Follow [this guide](https://sysprogs.com/VisualKernel/tutorials/raspberry/jtagsetup/) for the device pinout.
 
 ``` sh
 cd libjaylink
@@ -128,7 +128,7 @@ sudo make install
 ```
 
 ``` sh
-openocd -f openocd-usb-sipeed.cfg
+openocd -f openocd/tcl/interface/jlink.cfg -f ./raspberrypi4.cfg
 ```
 
 Connecting from the debian instance under QEMU:
