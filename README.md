@@ -100,11 +100,9 @@ make -j`nproc` OPENSBI=../opensbi/build/platform/generic/firmware/fw_dynamic.bin
 
 ``` sh
 cd linux
-git remote add d1 https://github.com/smaeul/linux.git
-git fetch d1
-git switch -c riscv-d1-all d1/d1/all
-make 64-bit.config
-make -j`nproc`
+KERNEL=kernel8
+make bcm2711_defconfig
+make -j`nproc` Image.gz modules dtbs
 ```
 
 

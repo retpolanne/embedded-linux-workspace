@@ -35,3 +35,6 @@
 [submodule "rpi-linux"]
 	path = rpi-linux
 	url = https://github.com/raspberrypi/linux
+[submodule "usbboot"]
+	path = usbboot
+	url = https://github.com/raspberrypi/usbboot.git
