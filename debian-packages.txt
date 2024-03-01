@@ -40,3 +40,4 @@ ninja-build
 git
 cmake
 libglib2.0-dev
+debootstrap

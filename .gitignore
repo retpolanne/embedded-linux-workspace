@@ -3,3 +3,5 @@ authinfo
 authinfo.gpg
 out
 out.tgz
+ramdisk.cpio.gz
+debian-chroot
