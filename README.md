@@ -107,3 +107,32 @@ make 64-bit.config
 make -j`nproc`
 ```
 
+
+# Jlink and OpenOCD
+
+Follow this [guide](https://linaro.atlassian.net/wiki/spaces/TCWGPUB/pages/25296346120/Raspberry+Pi+Linux+kernel+debugging+with+OpenOCD) on the pinout for the device.
+
+``` sh
+cd libjaylink
+./autogen.sh
+./configure
+make
+sudo make install
+```
+
+``` sh
+cd openocd
+./bootstrap
+./configure --enable-jlink
+sudo make install
+```
+
+``` sh
+openocd -f openocd-usb-sipeed.cfg
+```
+
+Connecting from the debian instance under QEMU:
+
+``` sh
+telnet 192.168.5.2 4444
+```

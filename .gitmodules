@@ -26,3 +26,9 @@
 [submodule "xfel"]
 	path = xfel
 	url = https://github.com/xboot/xfel.git
+[submodule "openocd"]
+	path = openocd
+	url = https://github.com/openocd-org/openocd.git
+[submodule "libjaylink"]
+	path = libjaylink
+	url = https://github.com/syntacore/libjaylink.git
