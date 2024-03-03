@@ -89,13 +89,13 @@ make -j`nproc` linux
 
 ``` sh
 cd opensbi
-make PLATFORM=generic FW_FDT_PATH=../u-boot/arch/riscv/dts/sun20i-d1-mangopi-mq-pro.dtb FW_PIC=y -j`nproc`
+make PLATFORM=generic FW_FDT_PATH=../u-boot/arch/riscv/dts/sun20i-d1-mangopi-mq-pro.dtb FW_PIC=y FW_PAYLOAD_PATH=../u-boot/u-boot-dtb.bin -j`nproc` 
 ```
 
 ``` sh
 cd u-boot
 make mangopi_mq_pro_defconfig
-make -j`nproc` OPENSBI=../opensbi/build/platform/generic/firmware/fw_dynamic.bin
+make -j`nproc` OPENSBI=../opensbi/build/platform/generic/firmware/fw_payload.bin
 ```
 
 ``` sh
