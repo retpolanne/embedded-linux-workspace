@@ -22,3 +22,16 @@ bc
 swig
 libssl-dev
 u-boot-tools
+libelf-dev
+libdw-dev
+systemtap-sdt-dev
+libunwind-dev
+clang
+libperl-dev
+liblzma-dev
+libzstd-dev
+libcap-dev
+libnuma-dev
+libbabeltrace-ctf-dev
+libpfm4-dev
+libtraceevent-dev
