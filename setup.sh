@@ -12,3 +12,4 @@ echo "Installing pwclient"
 pipx install pwclient
 echo "Configuring pwclient"
 ln -fns $PWD/pwclientrc $HOME/.pwclientrc
+ln -fns $PWD/linux-config $PWD/linux/.config

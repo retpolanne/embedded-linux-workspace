@@ -16,3 +16,6 @@
 [submodule "crust"]
 	path = crust
 	url = https://github.com/crust-firmware/crust
+[submodule "dwarves"]
+	path = dwarves
+	url = https://github.com/acmel/dwarves.git
