@@ -35,3 +35,5 @@ libnuma-dev
 libbabeltrace-ctf-dev
 libpfm4-dev
 libtraceevent-dev
+libreadline-dev
+llvm

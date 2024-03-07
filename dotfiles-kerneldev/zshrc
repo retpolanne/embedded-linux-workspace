@@ -103,7 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"# Lima BEGIN
 # Make sure iptables and mount.fuse3 are available
-PATH="$PATH:/usr/sbin:/sbin"
+PATH="/usr/local/bin:$PATH:/usr/sbin:/sbin"
 export PATH
 # Lima END
 # fzf
